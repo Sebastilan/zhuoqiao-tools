@@ -1,0 +1,2 @@
+httpx>=0.24
+Pillow>=9   # optional: shrinks oversized Elsevier figures before XML->PDF rendering

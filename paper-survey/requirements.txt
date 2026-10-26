@@ -1,0 +1,2 @@
+# 无第三方依赖:只用 Python 标准库。需要 Python >= 3.12。
+# 安装:无需 pip install;确认版本  python3 --version
