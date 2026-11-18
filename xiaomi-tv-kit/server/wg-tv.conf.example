@@ -1,0 +1,13 @@
+# /etc/wireguard/wg-tv.conf —— 服务器端。密钥: wg genkey | tee server.key | wg pubkey > server.pub
+[Interface]
+PrivateKey = <服务器私钥>
+ListenPort = 51821
+Address = <WG_SERVER_ADDR>/32
+Table = off
+# 回程路由;IPv6 一律拒绝,逼 App 走 IPv4 代理
+PostUp = ip route replace <WG_TV_ADDR>/32 dev wg-tv; ip -6 rule add iif wg-tv lookup 201 pref 201; ip -6 route replace prohibit default table 201
+PostDown = ip route del <WG_TV_ADDR>/32 dev wg-tv || true; ip -6 rule del iif wg-tv lookup 201 pref 201 || true; ip -6 route flush table 201 || true
+
+[Peer]
+PublicKey = <电视公钥>
+AllowedIPs = <WG_TV_ADDR>/32

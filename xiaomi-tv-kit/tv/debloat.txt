@@ -1,0 +1,14 @@
+# 小米电视(Android 9,MIUI TV / PatchWall)可安全停用的包。一行一个,# 后为说明。恢复: adb shell pm enable <包名>
+# 已在 小米电视 A75 竞技版 上验证;别的型号包名可能不同,不存在的会跳过
+com.xiaomi.mitv.appstore        # 应用商店:自动更新、推广告
+com.mitv.cloudcontrol           # 云控:远程下发配置
+com.xiaomi.mitv.healthdiagnosis # 健康诊断:日志上报
+com.xiaomi.gamecenter.sdk.service.mibox # 游戏中心组件
+com.xiaomi.smarthome.tv         # 米家(不用米家可停)
+com.xiaomi.mitv.karaoke.service # K 歌服务
+com.xiaomi.tv.gallery           # 小米画报(屏保广告)
+com.xiaomi.mitv.tvmanager       # 电视管家:待机 AutoClean 会杀掉 WireGuard
+com.mitv.shoplugin              # 购物插件
+com.miui.analytics              # 统计上报
+com.xiaomi.mitv.remotecontroller.service # 手机遥控服务(不用手机遥控可停)
+# 不要停 com.mitv.tvhome(小米桌面):第三方桌面不被认作默认,停掉后主页键只剩黑屏

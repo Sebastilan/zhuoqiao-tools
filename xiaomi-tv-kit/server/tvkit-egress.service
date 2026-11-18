@@ -1,0 +1,13 @@
+[Unit]
+Description=xiaomi-tv-kit 出口(mihomo 透明代理)
+After=network-online.target wg-quick@wg-tv.service
+Wants=network-online.target
+
+[Service]
+ExecStartPre=@DIR@/server/net-up.sh
+ExecStart=/usr/local/bin/mihomo -d @DIR@ -f @WORK_DIR@/egress.yaml
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

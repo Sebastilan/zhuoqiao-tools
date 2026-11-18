@@ -1,0 +1,50 @@
+{
+ "nodes": {
+  ".env.example": {
+   "description": "全部配置项,只列变量名,用途与例值在注释里",
+   "kind": "源码单元"
+  },
+  ".gitignore": {
+   "description": "不随包的文件(缓存、.env、构建产物)",
+   "kind": "源码单元"
+  },
+  "AGENTS.md": {
+   "description": "给 agent 读的部署说明:架构、步骤、缺资源、验收、验证状态、坑",
+   "kind": "源码单元"
+  },
+  "CLAUDE.md": {
+   "description": "一行:读 AGENTS.md",
+   "kind": "源码单元"
+  },
+  "LICENSE": {
+   "description": "MIT 许可证",
+   "kind": "源码单元"
+  },
+  "launcher": {
+   "description": "可选干净桌面",
+   "kind": "源码单元"
+  },
+  "requirements.txt": {
+   "description": "Python 依赖(pyyaml)",
+   "kind": "源码单元"
+  },
+  "selftest.sh": {
+   "description": "离线自检:语法、配置生成、桌面源码齐全",
+   "kind": "源码单元"
+  },
+  "server": {
+   "description": "服务器端脚本与模板",
+   "kind": "源码单元"
+  },
+  "tv": {
+   "description": "电视端模板、停用清单、设置说明",
+   "kind": "源码单元"
+  },
+  "测试": {
+   "description": "自检用示例订阅",
+   "kind": "源码单元"
+  }
+ },
+ "members": "源码单元",
+ "plans": []
+}

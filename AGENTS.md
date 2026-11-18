@@ -30,3 +30,4 @@
 | [pdf2md](pdf2md/AGENTS.md) | 批量 PDF 转 Markdown(公式/表格保留),底层 MinerU 官方 API;本地目录缓存,相同 PDF 不重复花配额。 | 已验证 / 取决于资源 |
 | [paper-download](paper-download/AGENTS.md) | 给一个 DOI / 链接 / 题名,解析成 DOI,从开放获取源或出版商下载全文 PDF,并核验是不是这篇(页数、首两页的 DOI 或题名+作者、页数对得上出版社登记的页码范围);核不过不交付。单机运行,本地目录当论文库。 | 已验证 / 取决于资源 / 未验证 |
 | [paper-survey](paper-survey/AGENTS.md) | 一段模糊的调研需求 → 本地一页摘要级文献调研(最相关 + 近两年新进展,各一段综述式总结 + GB/T 7714-2015 文献列表),可在页面上勾选、批注,按勾选批量下载。 | 已验证 / 取决于资源 / 未验证 |
+| [xiaomi-tv-kit](xiaomi-tv-kit/AGENTS.md) | 让国内的小米电视(Android TV 9)稳定看 YouTube、Stremio、Pluto、Tubi:家里一台 Linux 服务器做翻墙出口,电视只让指定 App 走隧道,国内 App 直连;看门狗对抗小米杀后台;可选一个干净的电视桌面。 | 已验证 / 取决于资源 / 未验证 |

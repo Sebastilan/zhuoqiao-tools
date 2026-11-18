@@ -20,3 +20,6 @@
 [![演示视频](https://zhuoqiao.top/tools/paper-survey/poster.jpg)](https://zhuoqiao.top/tools/paper-survey/)
 
 MIT。
+
+### [小米电视配置包](xiaomi-tv-kit/)
+让国内的小米电视稳定看 YouTube、Stremio、Pluto、Tubi,去广告、防杀后台,可选干净桌面。

@@ -1,0 +1,34 @@
+{
+ "nodes": {
+  ".gitignore": {
+   "description": "不随包的文件(缓存、.env、构建产物)",
+   "kind": "源码单元"
+  },
+  "AndroidManifest.xml": {
+   "description": "桌面清单:主页 Activity 与辅助服务",
+   "kind": "源码单元"
+  },
+  "Home.java": {
+   "description": "桌面界面:入口、常看、宫崎骏二级页、网络灯",
+   "kind": "源码单元"
+  },
+  "HomeGuard.java": {
+   "description": "辅助服务:小米桌面冒头就切回",
+   "kind": "源码单元"
+  },
+  "build.sh": {
+   "description": "无 gradle 打包",
+   "kind": "源码单元"
+  },
+  "fetch_posters.sh": {
+   "description": "下载海报到 assets",
+   "kind": "源码单元"
+  },
+  "res": {
+   "description": "Android 资源",
+   "kind": "源码单元"
+  }
+ },
+ "members": "源码单元",
+ "plans": []
+}

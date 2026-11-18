@@ -1,0 +1,11 @@
+[Unit]
+Description=xiaomi-tv-kit 电视看门狗(每 10 秒)
+After=network-online.target
+
+[Service]
+User=@USER@
+ExecStart=/bin/sh -c "while :; do @DIR@/server/watchdog.sh; sleep 10; done"
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

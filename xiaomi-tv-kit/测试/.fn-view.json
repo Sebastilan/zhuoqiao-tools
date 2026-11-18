@@ -1,0 +1,10 @@
+{
+ "nodes": {
+  "sample-subscription.yaml": {
+   "description": "两个假节点的示例订阅",
+   "kind": "源码单元"
+  }
+ },
+ "members": "源码单元",
+ "plans": []
+}

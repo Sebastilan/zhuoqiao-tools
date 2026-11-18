@@ -1,0 +1,22 @@
+{
+ "nodes": {
+  "debloat.sh": {
+   "description": "按清单停用",
+   "kind": "源码单元"
+  },
+  "debloat.txt": {
+   "description": "可停用的小米包清单",
+   "kind": "源码单元"
+  },
+  "settings.md": {
+   "description": "电视上手动设置的几项",
+   "kind": "源码单元"
+  },
+  "wireguard-tv.conf.example": {
+   "description": "电视端 WireGuard 模板",
+   "kind": "源码单元"
+  }
+ },
+ "members": "源码单元",
+ "plans": []
+}

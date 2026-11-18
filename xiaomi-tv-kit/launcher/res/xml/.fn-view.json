@@ -1,0 +1,10 @@
+{
+ "nodes": {
+  "guard.xml": {
+   "description": "辅助服务配置",
+   "kind": "源码单元"
+  }
+ },
+ "members": "源码单元",
+ "plans": []
+}

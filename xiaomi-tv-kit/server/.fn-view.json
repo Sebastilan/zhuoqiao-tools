@@ -1,0 +1,30 @@
+{
+ "nodes": {
+  "gen_config.py": {
+   "description": "从 Clash 订阅生成出口 mihomo 配置",
+   "kind": "源码单元"
+  },
+  "net-up.sh": {
+   "description": "nft 透明代理与 DNS 转发",
+   "kind": "源码单元"
+  },
+  "tvkit-egress.service": {
+   "description": "出口服务 systemd 模板",
+   "kind": "源码单元"
+  },
+  "tvkit-watchdog.service": {
+   "description": "看门狗 systemd 模板",
+   "kind": "源码单元"
+  },
+  "watchdog.sh": {
+   "description": "电视看门狗:重拉隧道、加回接管、写网络灯",
+   "kind": "源码单元"
+  },
+  "wg-tv.conf.example": {
+   "description": "服务器端 WireGuard 模板",
+   "kind": "源码单元"
+  }
+ },
+ "members": "源码单元",
+ "plans": []
+}

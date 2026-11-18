@@ -1,0 +1,13 @@
+# 导入到电视的 WireGuard App(可生成二维码或 adb push 后导入)
+[Interface]
+PrivateKey = <电视私钥>
+Address = <WG_TV_ADDR>/32
+# DNS 指向服务器隧道地址,服务器会把 53 转给 mihomo
+DNS = <WG_SERVER_ADDR>
+
+[Peer]
+PublicKey = <服务器公钥>
+Endpoint = <SERVER_LAN_IP>:51821
+AllowedIPs = 0.0.0.0/0
+PersistentKeepalive = 25
+# 在 App 里编辑隧道 → 「应用程序」→ 只勾选要翻墙的 App(YouTube 客户端、Stremio、Pluto、Tubi…),国内 App 直连
