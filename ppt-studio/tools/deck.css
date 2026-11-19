@@ -1,0 +1,66 @@
+/* 讲座 HTML 演示引擎:1920×1080 画布等比缩放;只显示当前页;分步出现;备注不上屏
+   独立打开(body.deck):#deck 固定铺满视口,接管整页;被别的页面嵌入(如别的页面把 body 内容注入自身):
+   #deck 按所在容器宽与可见高度等比缩放、裁掉溢出,不碰宿主的 html/body。 */
+*{box-sizing:border-box}
+body.deck{margin:0;padding:0;width:100%;height:100%;overflow:hidden;background:#000}
+html:has(body.deck){margin:0;padding:0;width:100%;height:100%;overflow:hidden;background:#000}
+#deck{position:relative;width:100%;overflow:hidden;background:#000;touch-action:pan-y;-webkit-user-select:none;user-select:none;
+  font-family:"Noto Sans CJK SC","Source Han Sans SC","PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+body.deck #deck{position:fixed;inset:0;height:auto;touch-action:none}
+:where(#deck *){box-sizing:border-box;margin:0;padding:0}
+#deck .slide :is(h1,h2,h3,h4,h5,h6,p,ul,ol,li,blockquote,figure){margin:0;padding:0}
+#stage{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0}
+.slide{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;display:none}
+.slide.on{display:block}
+.slide>aside.notes{display:none}
+/* 分步:data-s="1..n" 的元素按点击依次出现;.shown 由引擎加 */
+.slide [data-s]{opacity:0;transform:translateY(14px);transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1)}
+.slide [data-s].shown{opacity:1;transform:none}
+.slide [data-s].fade{transform:none}
+/* 线条描绘:path 加 class="draw" pathLength="1",出现时从头画到尾 */
+.slide .draw{stroke-dasharray:1;stroke-dashoffset:1}
+.slide.on .draw:not([data-s]),.slide .draw.shown{animation:drawon 1.2s cubic-bezier(.6,0,.2,1) forwards;animation-delay:var(--d,0s)}
+@keyframes drawon{to{stroke-dashoffset:0}}
+/* 入场:class="rise" 进页即上浮出现,--d 控制先后 */
+.slide.on .rise{animation:rise .8s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--d,0s)}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+/* 页码 */
+#pg{position:absolute;right:14px;bottom:10px;font:12px/1 sans-serif;color:rgba(128,128,128,.55);z-index:5;pointer-events:none}
+/* 演讲计时条(T/H):视口最边缘,半透明小字,不压正文 */
+#tm{position:fixed;left:8px;top:5px;z-index:9;font:600 13px/1.4 "Noto Sans Mono CJK SC",Consolas,monospace;color:rgba(110,110,110,.62);background:rgba(255,255,255,.28);padding:1px 8px;border-radius:4px;white-space:pre;cursor:pointer;user-select:none;font-variant-numeric:tabular-nums}
+#tm.warn{color:rgba(200,120,30,.85)}
+#tm b{font-weight:800}#tm b.slow{color:rgba(205,50,35,.95)}#tm b.fast{color:rgba(30,140,70,.95)}
+#tm.over{color:rgba(205,60,40,.9)}
+#fsb{position:fixed;right:12px;bottom:30px;z-index:9;font:600 13px/1 "Noto Sans CJK SC",-apple-system,"PingFang SC",sans-serif;color:rgba(90,90,90,.75);background:rgba(255,255,255,.45);border:1px solid rgba(120,120,120,.35);border-radius:5px;padding:5px 9px;cursor:pointer}
+#fsb:hover{color:#1F2A44;background:rgba(255,255,255,.85)}
+/* 备注面板(N)与跳页(数字+回车) */
+#notes{position:fixed;left:0;right:0;bottom:0;max-height:42vh;overflow:auto;background:rgba(15,18,28,.94);color:#e8ecf4;
+  font-size:22px;line-height:1.7;padding:18px 28px 26px;z-index:10;display:none;white-space:pre-wrap;border-top:2px solid #3b82f6}
+#notes.open{display:block}
+#notes b{color:#93c5fd;font-weight:600}
+#jump{position:fixed;left:50%;top:40%;transform:translate(-50%,-50%);font:48px/1 sans-serif;color:#fff;background:rgba(0,0,0,.7);
+  padding:16px 28px;border-radius:12px;z-index:11;display:none}
+body.hidecursor #deck{cursor:none}
+/* 演讲者视图(P 开新窗) */
+body.presenter{background:#111;color:#eee;overflow:auto}
+body.presenter #deck{display:none}
+#pv{display:none}
+body.presenter #pv{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:16px;height:100vh}
+#pv .now,#pv .next{position:relative;background:#000;aspect-ratio:16/9;overflow:hidden;border-radius:6px}
+#pv .next{opacity:.8}
+#pv .meta{grid-column:1/3;display:flex;gap:24px;align-items:center;font:20px sans-serif;color:#9ca3af}
+#pv .meta .clock{font-size:32px;color:#fff;font-variant-numeric:tabular-nums}
+#pv .txt{grid-column:1/3;font-size:26px;line-height:1.75;white-space:pre-wrap;overflow:auto}
+#pv iframe{border:0;width:1920px;height:1080px;transform-origin:0 0;pointer-events:none}
+@media print{
+  @page{size:1920px 1080px;margin:0}
+  html,body,body.deck{overflow:visible!important;background:#fff;height:auto}
+  #deck,body.deck #deck{position:static;height:auto!important;overflow:visible}
+  #stage{position:static;transform:none!important;width:auto;height:auto}
+  .slide{display:block!important;position:relative;page-break-after:always;break-after:page}
+  .slide [data-s]{opacity:1!important;transform:none!important}
+  .slide .draw{stroke-dashoffset:0!important;animation:none!important}
+  .slide .rise{animation:none!important}
+  #pg,#notes,#jump,#tm,#fsb{display:none!important}
+}
+@media (prefers-reduced-motion:reduce){.slide *{animation-duration:.01s!important;transition-duration:.01s!important}}

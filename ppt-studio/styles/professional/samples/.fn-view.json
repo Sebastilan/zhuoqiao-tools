@@ -1,0 +1,45 @@
+{
+  "nodes": {
+    "P1.html": {
+      "description": "专业版样例第 1 页:封面(机构简介)",
+      "kind": "源码单元"
+    },
+    "P1.jpg": {
+      "description": "专业版样例第 1 页渲染图",
+      "kind": "源码单元"
+    },
+    "P2.html": {
+      "description": "专业版样例第 2 页:关于我们(文字页)",
+      "kind": "源码单元"
+    },
+    "P2.jpg": {
+      "description": "专业版样例第 2 页渲染图",
+      "kind": "源码单元"
+    },
+    "P3.html": {
+      "description": "专业版样例第 3 页:几个数字(数字页)",
+      "kind": "源码单元"
+    },
+    "P3.jpg": {
+      "description": "专业版样例第 3 页渲染图",
+      "kind": "源码单元"
+    },
+    "P4.html": {
+      "description": "专业版样例第 4 页:公共配套(照片页)",
+      "kind": "源码单元"
+    },
+    "P4.jpg": {
+      "description": "专业版样例第 4 页渲染图",
+      "kind": "源码单元"
+    },
+    "P5.html": {
+      "description": "专业版样例第 5 页:服务与联系(文字页)",
+      "kind": "源码单元"
+    },
+    "P5.jpg": {
+      "description": "专业版样例第 5 页渲染图",
+      "kind": "源码单元"
+    }
+  },
+  "members": "源码单元"
+}

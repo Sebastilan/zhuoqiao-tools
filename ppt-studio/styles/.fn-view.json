@@ -1,0 +1,13 @@
+{
+  "nodes": {
+    "lecture": {
+      "description": "讲座版风格包",
+      "kind": "源码单元"
+    },
+    "professional": {
+      "description": "专业版风格包",
+      "kind": "源码单元"
+    }
+  },
+  "members": "源码单元"
+}

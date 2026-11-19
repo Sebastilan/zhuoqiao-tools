@@ -1,0 +1,49 @@
+{
+  "nodes": {
+    ".env.example": {
+      "description": "配置项:可选的浏览器路径变量",
+      "kind": "源码单元"
+    },
+    ".gitignore": {
+      "description": "不随包的文件(缓存、.env、自查产物)",
+      "kind": "源码单元"
+    },
+    "AGENTS.md": {
+      "description": "给 agent 读的说明:两套风格、入口、依赖、缺资源、验收、验证状态、限制",
+      "kind": "源码单元"
+    },
+    "CLAUDE.md": {
+      "description": "一行:读 AGENTS.md",
+      "kind": "源码单元"
+    },
+    "LICENSE": {
+      "description": "MIT 许可证",
+      "kind": "源码单元"
+    },
+    "requirements.txt": {
+      "description": "Python 依赖(playwright)",
+      "kind": "源码单元"
+    },
+    "selftest.sh": {
+      "description": "离线自检:文件齐全、样例格式、无外链",
+      "kind": "源码单元"
+    },
+    "画法.md": {
+      "description": "一页四步画法:点子、画、渲染自查、独立评审",
+      "kind": "源码单元"
+    },
+    "styles": {
+      "description": "两套风格包",
+      "kind": "源码单元"
+    },
+    "tools": {
+      "description": "渲染自查与翻页引擎",
+      "kind": "源码单元"
+    },
+    ".fn-module": {
+      "description": "模块标记",
+      "kind": "源码单元"
+    }
+  },
+  "members": "源码单元"
+}

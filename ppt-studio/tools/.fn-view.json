@@ -1,0 +1,17 @@
+{
+  "nodes": {
+    "deck.css": {
+      "description": "翻页整稿的样式",
+      "kind": "源码单元"
+    },
+    "deck.js": {
+      "description": "翻页引擎:分步、备注、全屏、演讲者视图",
+      "kind": "源码单元"
+    },
+    "render_check.py": {
+      "description": "渲染每页成图并查字数、图占比、相交、越界、字号、色板",
+      "kind": "源码单元"
+    }
+  },
+  "members": "源码单元"
+}

@@ -1,0 +1,32 @@
+/* 讲座版样式基座(B- 前缀):字体栈、色板、线宽、入场动效 */
+/* 色板 #1F2A44 #D9653B #2A7F7A #E8B04B #F2C6B4 #F6F1E7 #FFF9EE #F1E3C4 #FFFFFF */
+/* ── 基础类(各页照用)── */
+.B-s{background:#F6F1E7;color:#1F2A44}
+.B-s .B-art{position:absolute;left:0;top:0}
+.B-s .B-rule{position:absolute;left:104px;right:104px;top:96px;border-top:3px solid #1F2A44}
+.B-s .B-tag{position:absolute;left:104px;top:56px;height:40px;padding:0 18px 0 20px;background:#D9653B;color:#F6F1E7;font-size:28px;line-height:40px;font-weight:700;letter-spacing:.14em}
+.B-s .B-title{position:absolute;left:100px;font-family:"Noto Serif CJK SC","Source Han Serif SC","SimSun",serif;font-weight:900;font-size:104px;line-height:1;white-space:nowrap}
+.B-s .B-sub{position:absolute;left:106px;font-size:40px;line-height:1.2;font-weight:400;white-space:nowrap}
+.B-s .B-sub u{text-decoration:none;color:#D9653B;font-weight:700;padding:0 .2em}
+.B-s .B-sub b,.B-s .B-hl{font-weight:700;background:linear-gradient(transparent 58%,#E8B04B 58%,#E8B04B 92%,transparent 92%);padding:0 .08em}
+.B-s .B-serif{font-family:"Noto Serif CJK SC","Source Han Serif SC","SimSun",serif;font-weight:900}
+.B-s .B-ln{fill:none;stroke:#1F2A44;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.B-s .B-ol{stroke:#1F2A44;stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+.B-s .B-lab{font-size:30px;font-weight:500;fill:#1F2A44;text-anchor:middle}
+.B-s .B-say{font-size:34px;font-weight:500;fill:#1F2A44;text-anchor:middle}
+.B-s .B-num{font-family:"Noto Serif CJK SC","Source Han Serif SC",serif;font-size:30px;font-weight:900;fill:#1F2A44;text-anchor:middle}
+.B-s .B-mono{font-family:"DejaVu Sans Mono","Consolas","Menlo",monospace,"Noto Sans CJK SC";font-size:30px;font-weight:700;fill:#1F2A44}
+.B-s svg [data-s],.B-s .B-in{transform-box:fill-box;transform-origin:50% 70%}
+.slide.B-s [data-s]{transition:opacity .28s linear var(--d,0s),transform .7s cubic-bezier(.34,1.56,.64,1) var(--d,0s)}
+.slide.B-s [data-s]:not(.shown){transform:rotate(-7deg) scale(.8)}
+.slide.B-s .draw[data-s]:not(.shown){transform:none}
+.slide.on.B-s .B-in{animation:B-paste .75s cubic-bezier(.34,1.56,.64,1) both;animation-delay:var(--d,0s)}
+@keyframes B-paste{from{opacity:0;transform:rotate(-6deg) scale(.84)}35%{opacity:1}to{opacity:1;transform:none}}
+/* ── 通用小部件(用到哪个带哪个)── */
+.B-s .B-cap{font-size:30px;font-weight:700;fill:#1F2A44;text-anchor:middle}
+.B-s .B-id{font-family:"DejaVu Sans Mono","Consolas","Menlo",monospace,"Noto Sans CJK SC";font-size:28px;font-weight:700;fill:#2A7F7A;text-anchor:middle}
+.B-s .B-ph{fill:none;stroke:#1F2A44;stroke-width:2.5;stroke-dasharray:14 12;opacity:.4}
+.B-s .B-chap{position:absolute;left:96px;font-family:"Noto Serif CJK SC","Source Han Serif SC","SimSun",serif;font-weight:900;font-size:200px;line-height:1;white-space:nowrap}
+.B-s .B-chap i{font-style:normal;color:#D9653B;padding:0 .08em}
+.B-s .B-pt{position:absolute;font-size:42px;line-height:1.3;font-weight:500;white-space:nowrap}
+.B-s .B-pt small{display:block;font-size:32px;font-weight:400;opacity:.8;margin-top:4px}

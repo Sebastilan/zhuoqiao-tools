@@ -23,3 +23,6 @@ MIT。
 
 ### [小米电视配置包](xiaomi-tv-kit/)
 让国内的小米电视稳定看 YouTube、Stremio、Pluto、Tubi,去广告、防杀后台,可选干净桌面。
+
+### [AI 画 PPT](ppt-studio/)
+把讲稿和必要的素材交给你的 AI,它照讲座版、专业版两套风格一页一页画出来。

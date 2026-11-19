@@ -1,0 +1,17 @@
+{
+  "nodes": {
+    "spec.md": {
+      "description": "讲座版风格规范全文",
+      "kind": "源码单元"
+    },
+    "tokens.css": {
+      "description": "讲座版样式基座与色板",
+      "kind": "源码单元"
+    },
+    "samples": {
+      "description": "讲座版 5 页样例",
+      "kind": "源码单元"
+    }
+  },
+  "members": "源码单元"
+}

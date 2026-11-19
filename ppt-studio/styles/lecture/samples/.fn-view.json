@@ -1,0 +1,45 @@
+{
+  "nodes": {
+    "P1.html": {
+      "description": "讲座版样例第 1 页:封面(开好一场短会)",
+      "kind": "源码单元"
+    },
+    "P1.jpg": {
+      "description": "讲座版样例第 1 页渲染图",
+      "kind": "源码单元"
+    },
+    "P2.html": {
+      "description": "讲座版样例第 2 页:会为什么越开越长",
+      "kind": "源码单元"
+    },
+    "P2.jpg": {
+      "description": "讲座版样例第 2 页渲染图",
+      "kind": "源码单元"
+    },
+    "P3.html": {
+      "description": "讲座版样例第 3 页:会前、会中、会后",
+      "kind": "源码单元"
+    },
+    "P3.jpg": {
+      "description": "讲座版样例第 3 页渲染图",
+      "kind": "源码单元"
+    },
+    "P4.html": {
+      "description": "讲座版样例第 4 页:同一件事,两种开法",
+      "kind": "源码单元"
+    },
+    "P4.jpg": {
+      "description": "讲座版样例第 4 页渲染图",
+      "kind": "源码单元"
+    },
+    "P5.html": {
+      "description": "讲座版样例第 5 页:散会前的最后一分钟",
+      "kind": "源码单元"
+    },
+    "P5.jpg": {
+      "description": "讲座版样例第 5 页渲染图",
+      "kind": "源码单元"
+    }
+  },
+  "members": "源码单元"
+}

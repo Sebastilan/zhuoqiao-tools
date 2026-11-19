@@ -1,0 +1,17 @@
+{
+  "nodes": {
+    "spec.md": {
+      "description": "专业版风格规范全文",
+      "kind": "源码单元"
+    },
+    "tokens.css": {
+      "description": "专业版样式基座与色板",
+      "kind": "源码单元"
+    },
+    "samples": {
+      "description": "专业版 5 页样例",
+      "kind": "源码单元"
+    }
+  },
+  "members": "源码单元"
+}
